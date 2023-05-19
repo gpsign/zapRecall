@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Deck from "./Deck";
 
 export default function Corpo() {
+
 	return (
 		<Container>
 			<Logo />
@@ -14,8 +15,8 @@ export default function Corpo() {
 	);
 }
 const Container = styled.div`
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 
 	display: flex;
 	flex-direction: column;
