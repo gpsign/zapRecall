@@ -67,7 +67,11 @@ function Card(props) {
 				{expandida ? (
 					<>
 						<p data-test="flashcard-text">{props.pergunta}</p>
-						<GirarImg data-test="turn-btn" src={virar} onClick={() => setVirada(true)} />
+						<GirarImg
+							data-test="turn-btn"
+							src={virar}
+							onClick={() => setVirada(true)}
+						/>
 					</>
 				) : (
 					<>
@@ -111,6 +115,7 @@ function Card(props) {
 							setVirada(false);
 							setExpandida(false);
 							setRespondida(true);
+							props.setConcluidos(props.concluidos + 1);
 						}}
 					>
 						Quase não lembrei
@@ -122,6 +127,7 @@ function Card(props) {
 							setVirada(false);
 							setExpandida(false);
 							setRespondida(true);
+							props.setConcluidos(props.concluidos + 1);
 						}}
 					>
 						Zap!
