@@ -67,7 +67,7 @@ function Card(props) {
 				{expandida ? (
 					<>
 						<p data-test="flashcard-text">{props.pergunta}</p>
-						<GirarImg src={virar} onClick={() => setVirada(true)} />
+						<GirarImg data-test="turn-btn" src={virar} onClick={() => setVirada(true)} />
 					</>
 				) : (
 					<>
