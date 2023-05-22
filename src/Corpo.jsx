@@ -1,22 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "./assets/logo.svg";
 import Footer from "./Footer";
 import Deck from "./Deck";
 
 export default function Corpo() {
-
+	let [concluidos, setConcluidos] = useState(0);
+	let [total, setTotal] = useState(0);
 	return (
 		<Container>
 			<Logo />
-			<Deck />
-			<Footer />
+			<Deck
+				concluidos={concluidos}
+				setConcluidos={setConcluidos}
+				setTotal={setTotal}
+			/>
+			<Footer concluidos={concluidos} total={total} />
 		</Container>
 	);
 }
 const Container = styled.div`
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 
 	display: flex;
 	flex-direction: column;

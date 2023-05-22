@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default function Footer() {
-	return <FooterDiv>0/4 CONCLUÍDOS</FooterDiv>;
+export default function Footer({concluidos, total}) {
+	return <FooterDiv data-test="footer">{concluidos}/{total} CONCLUÍDOS</FooterDiv>;
 }
 
 const FooterDiv = styled.div`
@@ -10,9 +10,11 @@ const FooterDiv = styled.div`
 	left: 0;
 	width: 100vw;
 	height: 70px;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	background: #ffffff;
 	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 	z-index: 1;
