@@ -2,6 +2,9 @@ import styled, { keyframes, css } from "styled-components";
 import { useState } from "react";
 import seta from "./assets/seta.svg";
 import virar from "./assets/virar.svg";
+import vermelho from "./assets/vermelho.svg";
+import laranja from "./assets/laranja.svg";
+import verde from "./assets/verde.svg";
 
 export default function Deck({ concluidos, setConcluidos, setTotal }) {
 	const cards = [
@@ -140,10 +143,10 @@ function Card(props) {
 
 function icone(resultado) {
 	if (resultado === "vermelho")
-		return <Status data-test="no-icon" src={`/src/assets/vermelho.svg`} />;
+		return <Status data-test="no-icon" src={vermelho} />;
 	else if (resultado === "laranja")
-		return <Status data-test="partial-icon" src={`/src/assets/laranja.svg`} />;
-	else return <Status data-test="zap-icon" src={`/src/assets/verde.svg`} />;
+		return <Status data-test="partial-icon" src={laranja} />;
+	else return <Status data-test="zap-icon" src={verde} />;
 }
 
 const Status = styled.img`
