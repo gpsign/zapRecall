@@ -1,6 +1,24 @@
 import styled, { keyframes } from "styled-components";
 import seta from "./assets/seta.svg";
 import { useState } from "react";
+import seta from "./assets/seta.svg";
+import virar from "./assets/virar.svg";
+
+export default function Deck() {
+	let deck = [1, 2, 3, 4, 5, 6, 7, 8];
+	return (
+		<DeckDiv>
+			{deck.map((i) => (
+				<Card numero={i} />
+			))}
+		</DeckDiv>
+	);
+}
+const DeckDiv = styled.div`
+	height: 650px;
+	overflow-y: auto;
+	scrollbar-width: none;
+`;
 
 function Card(props) {
 	return (
